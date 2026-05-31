@@ -1,0 +1,132 @@
+{
+  "timestamp": "2026-03-17T06:55:16.652Z",
+  "database": "boymejjlnrlbfizavzgn",
+  "url": "https://boymejjlnrlbfizavzgn.supabase.co",
+  "sections": {
+    "tables": [
+      {
+        "table_name": "users",
+        "table_schema": "public",
+        "columns": []
+      },
+      {
+        "table_name": "roles",
+        "table_schema": "public",
+        "columns": []
+      },
+      {
+        "table_name": "certificates",
+        "table_schema": "public",
+        "columns": [
+          {
+            "name": "id"
+          },
+          {
+            "name": "student_id"
+          },
+          {
+            "name": "certificate_type"
+          },
+          {
+            "name": "status"
+          },
+          {
+            "name": "form_data"
+          },
+          {
+            "name": "application_date"
+          },
+          {
+            "name": "issue_date"
+          },
+          {
+            "name": "admin_remarks"
+          },
+          {
+            "name": "generated_certificate_url"
+          },
+          {
+            "name": "created_at"
+          },
+          {
+            "name": "updated_at"
+          }
+        ]
+      },
+      {
+        "table_name": "templates",
+        "table_schema": "public",
+        "columns": []
+      },
+      {
+        "table_name": "authorities",
+        "table_schema": "public",
+        "columns": []
+      },
+      {
+        "table_name": "approvals",
+        "table_schema": "public",
+        "columns": []
+      },
+      {
+        "table_name": "template_content",
+        "table_schema": "public",
+        "columns": []
+      },
+      {
+        "table_name": "approval_chains",
+        "table_schema": "public",
+        "columns": []
+      }
+    ],
+    "row_counts": {
+      "users": {
+        "row_count": 0,
+        "status": "ok"
+      },
+      "roles": {
+        "row_count": 0,
+        "status": "ok"
+      },
+      "certificates": {
+        "row_count": 0,
+        "status": "ok"
+      },
+      "templates": {
+        "row_count": 0,
+        "status": "ok"
+      },
+      "authorities": {
+        "row_count": 0,
+        "status": "ok"
+      },
+      "approvals": {
+        "row_count": 0,
+        "status": "ok"
+      },
+      "template_content": {
+        "row_count": 0,
+        "status": "ok"
+      },
+      "approval_chains": {
+        "row_count": 0,
+        "status": "ok"
+      }
+    },
+    "certificate_breakdown": {
+      "total_count": 55,
+      "by_type": {},
+      "by_status": {
+        "approved": 44,
+        "rejected": 4,
+        "pending": 7
+      },
+      "by_type_and_status": {}
+    },
+    "user_roles": {},
+    "templates": [],
+    "approval_chains": [],
+    "authorities": [],
+    "roles": []
+  }
+}

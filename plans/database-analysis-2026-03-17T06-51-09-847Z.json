@@ -1,0 +1,113 @@
+{
+  "tables": [],
+  "enum_types": {},
+  "functions": [
+    {
+      "function_name": "approve_certificate",
+      "schema": "public",
+      "security_type": "unknown"
+    },
+    {
+      "function_name": "create_admin_user",
+      "schema": "public",
+      "security_type": "unknown"
+    },
+    {
+      "function_name": "generate_certificate",
+      "schema": "public",
+      "security_type": "unknown"
+    },
+    {
+      "function_name": "manage_authority",
+      "schema": "public",
+      "security_type": "unknown"
+    },
+    {
+      "function_name": "get_user_role",
+      "schema": "public",
+      "security_type": "unknown"
+    },
+    {
+      "function_name": "check_approval_chain",
+      "schema": "public",
+      "security_type": "unknown"
+    }
+  ],
+  "triggers": [],
+  "rls_policies": {
+    "users": {
+      "table": "users",
+      "policies": []
+    },
+    "roles": {
+      "table": "roles",
+      "policies": []
+    },
+    "certificates": {
+      "table": "certificates",
+      "policies": []
+    },
+    "templates": {
+      "table": "templates",
+      "policies": []
+    },
+    "authorities": {
+      "table": "authorities",
+      "policies": []
+    },
+    "approvals": {
+      "table": "approvals",
+      "policies": []
+    },
+    "template_content": {
+      "table": "template_content",
+      "policies": []
+    },
+    "approval_chains": {
+      "table": "approval_chains",
+      "policies": []
+    }
+  },
+  "table_statistics": {
+    "users": {
+      "row_count": 0,
+      "table_size": "unavailable"
+    },
+    "roles": {
+      "row_count": 0,
+      "table_size": "unavailable"
+    },
+    "certificates": {
+      "row_count": 55,
+      "table_size": "unknown"
+    },
+    "templates": {
+      "row_count": 0,
+      "table_size": "unavailable"
+    },
+    "authorities": {
+      "row_count": 0,
+      "table_size": "unavailable"
+    },
+    "approvals": {
+      "row_count": 0,
+      "table_size": "unavailable"
+    },
+    "template_content": {
+      "row_count": 0,
+      "table_size": "unavailable"
+    },
+    "approval_chains": {
+      "row_count": 0,
+      "table_size": "unavailable"
+    }
+  },
+  "certificate_breakdown": {
+    "by_type": {},
+    "by_status": {},
+    "by_type_and_status": {}
+  },
+  "user_roles_distribution": {},
+  "template_configurations": [],
+  "approval_chain_configurations": []
+}

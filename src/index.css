@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* St. Peter's College Certificate Portal Design System */
+
+@layer base {
+  :root {
+    /* Navy Blue - Primary brand color */
+    --background: 0 0% 99%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Navy Blue Primary */
+    --primary: 218 56% 17%;
+    --primary-foreground: 45 93% 47%;
+
+    /* Light Navy for secondary */
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 218 56% 17%;
+
+    /* Muted grays */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Gold Accent */
+    --accent: 43 96% 56%;
+    --accent-foreground: 218 56% 17%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 218 56% 17%;
+
+    --radius: 0.625rem;
+
+    /* Extended palette */
+    --navy-900: 218 56% 11%;
+    --navy-800: 218 56% 17%;
+    --navy-700: 218 50% 24%;
+    --navy-600: 218 45% 32%;
+    --navy-500: 218 40% 45%;
+    --navy-100: 214 40% 96%;
+    
+    --gold-600: 43 96% 40%;
+    --gold-500: 43 96% 56%;
+    --gold-400: 43 96% 68%;
+    --gold-300: 43 80% 82%;
+    --gold-200: 43 60% 92%;
+    
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Sidebar */
+    --sidebar-background: 218 56% 11%;
+    --sidebar-foreground: 214 32% 91%;
+    --sidebar-primary: 43 96% 56%;
+    --sidebar-primary-foreground: 218 56% 17%;
+    --sidebar-accent: 218 45% 20%;
+    --sidebar-accent-foreground: 214 32% 91%;
+    --sidebar-border: 218 45% 20%;
+    --sidebar-ring: 43 96% 56%;
+
+    /* Gradients */
+    --gradient-navy: linear-gradient(135deg, hsl(218 56% 11%) 0%, hsl(218 45% 24%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 96% 56%) 0%, hsl(38 92% 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(218 56% 11%) 0%, hsl(218 50% 20%) 50%, hsl(218 45% 28%) 100%);
+  }
+
+  .dark {
+    --background: 218 56% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 218 56% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 218 56% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 43 96% 56%;
+    --primary-foreground: 218 56% 11%;
+
+    --secondary: 218 45% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 218 45% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 218 56% 11%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 218 45% 20%;
+    --input: 218 45% 20%;
+    --ring: 43 96% 56%;
+
+    --sidebar-background: 218 56% 6%;
+    --sidebar-foreground: 214 32% 91%;
+    --sidebar-primary: 43 96% 56%;
+    --sidebar-primary-foreground: 218 56% 11%;
+    --sidebar-accent: 218 45% 15%;
+    --sidebar-accent-foreground: 214 32% 91%;
+    --sidebar-border: 218 45% 15%;
+    --sidebar-ring: 43 96% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .college-header {
+    background: var(--gradient-hero);
+  }
+  
+  .btn-gold {
+    @apply bg-accent text-accent-foreground font-semibold shadow-lg;
+    @apply hover:brightness-110 transition-all duration-200;
+  }
+  
+  .btn-navy {
+    @apply bg-primary text-primary-foreground font-semibold shadow-lg;
+    @apply hover:brightness-125 transition-all duration-200;
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-xl shadow-lg border border-border/50;
+    @apply hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .status-pending {
+    @apply bg-warning/15 text-warning border border-warning/30;
+  }
+
+  .status-approved {
+    @apply bg-success/15 text-success border border-success/30;
+  }
+
+  .status-rejected {
+    @apply bg-destructive/15 text-destructive border border-destructive/30;
+  }
+
+  .input-styled {
+    @apply border-2 border-border focus:border-primary focus:ring-2 focus:ring-primary/20;
+    @apply rounded-lg transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

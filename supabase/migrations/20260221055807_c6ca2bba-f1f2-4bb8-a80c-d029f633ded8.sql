@@ -1,0 +1,1 @@
+ALTER TABLE public.template_fields ADD COLUMN IF NOT EXISTS match_required boolean NOT NULL DEFAULT false;
